@@ -6,8 +6,7 @@ let highScore = 0;
 const displayMessage = message => {
   document.querySelector('.message').textContent = message;
 };
-
-document.querySelector('.check').addEventListener('click', function () {
+const checkFunction = function () {
   let guess = Number(document.querySelector('.guess').value);
 
   if (!guess) {
@@ -35,6 +34,13 @@ document.querySelector('.check').addEventListener('click', function () {
       displayMessage('❌ GAME OVER ❌');
     }
     document.querySelector('.score').textContent = score;
+  }
+};
+
+document.querySelector('.check').addEventListener('click', checkFunction);
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Enter') {
+    checkFunction();
   }
 });
 // Funcionalidad del boton AGAIN! Resetear todo pero sigue tomando el High score.
