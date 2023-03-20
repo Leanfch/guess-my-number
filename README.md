@@ -7,3 +7,5 @@ Empezarás con 20 puntos, cada intento fallido se te restará un punto.
 Si llegas a una puntuación de 0 perderás.
 
 Diviertete.
+
+Deployado en vercel: https://guess-my-number-sigma-six.vercel.app/
